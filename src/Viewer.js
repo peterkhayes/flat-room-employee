@@ -21,7 +21,7 @@ export default class Viewer extends React.Component {
 
   componentDidMount () {
     this._updatePhotos();
-    this.interval = setInterval(this._updatePhotos, 15000);
+    this.interval = setInterval(this._updatePhotos, 3000);
   }
 
   componentWillUnmount () {
@@ -70,7 +70,7 @@ export default class Viewer extends React.Component {
             showThumbs={false}
             infiniteLoop
             autoPlay
-            interval={3000}
+            interval={15000}
           >
             {Object.keys(photos).map((name) => (
               <Employee key={name} name={name} photo={photos[name]} />
