@@ -61,7 +61,7 @@ export default class Viewer extends React.Component {
   render () {
     const {photos} = this.state;
     return (
-      <div>
+      <div style={pageStyle}>
         <div style={containerStyle}>
           <Carousel
             showArrows={false}
@@ -83,14 +83,16 @@ export default class Viewer extends React.Component {
   }
 }
 
-
+const pageStyle = {
+  height: "100vh",
+};
 
 const containerStyle = {
   position: "absolute",
   width: 384,
-  top: 100,
+  top: "50%",
   left: "50%",
-  marginLeft: "-192px",
+  transform: "translate(-50%, -50%)",
   textAlign: "center",
   borderRadius: 15,
   padding: 15,
